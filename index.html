@@ -459,6 +459,273 @@
             text-align: center;
         }
 
+        /* === ESTILOS DE LA SECCIÓN DE PLANES (PRICING) AGREGADOS === */
+
+        .pricing {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .pricing-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .pricing-toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .toggle-label {
+            font-size: 1.1rem;
+            color: #6B7280;
+            font-weight: 600;
+        }
+
+        .toggle-label.active {
+            color: #166534;
+        }
+
+        .save-badge {
+            background: #FEF3C7;
+            color: #F59E0B;
+            padding: 0.3rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-left: 0.5rem;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #D1D5DB;
+            transition: 0.4s;
+            border-radius: 30px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        .toggle-switch input:checked + .toggle-slider {
+            background-color: #16A34A;
+        }
+
+        .toggle-switch input:checked + .toggle-slider:before {
+            transform: translateX(30px);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(22, 163, 74, 0.15);
+        }
+
+        .pricing-card.featured {
+            border-color: #16A34A;
+            box-shadow: 0 10px 30px rgba(22, 163, 74, 0.2);
+            transform: scale(1.05);
+        }
+
+        .plan-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: #E5E7EB;
+            color: #6B7280;
+        }
+
+        .plan-badge.premium {
+            background: linear-gradient(135deg, #F59E0B 0%, #EAB308 100%);
+            color: white;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.8rem;
+            color: #111827;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-container {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+
+        .currency {
+            font-size: 1.5rem;
+            color: #6B7280;
+            font-weight: 600;
+        }
+
+        .price {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #16A34A;
+            margin: 0 0.3rem;
+        }
+
+        .price-custom {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #16A34A;
+        }
+
+        .period {
+            font-size: 1.1rem;
+            color: #6B7280;
+        }
+
+        .annual-info {
+            display: none;
+            flex-direction: column;
+            gap: 0.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .annual-info.show {
+            display: flex;
+        }
+
+        .original-price {
+            font-size: 0.9rem;
+            color: #9CA3AF;
+            text-decoration: line-through;
+        }
+
+        .discount-text {
+            font-size: 0.95rem;
+            color: #16A34A;
+            font-weight: 600;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .features-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #F3F4F6;
+            font-size: 0.95rem;
+            color: #4B5563;
+        }
+
+        .plan-button {
+            display: block;
+            width: 100%;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .plan-button.basic {
+            background: #E5E7EB;
+            color: #4B5563;
+        }
+
+        .plan-button.premium {
+            background: linear-gradient(135deg, #166534 0%, #16A34A 100%);
+            color: white;
+        }
+
+        .plan-button.enterprise {
+            background: #111827;
+            color: white;
+        }
+
+        .premium-benefits {
+            background: #F9FAFB;
+            border-radius: 20px;
+            padding: 3rem;
+        }
+
+        .premium-benefits h3 {
+            text-align: center;
+            font-size: 2rem;
+            color: #166534;
+            margin-bottom: 2.5rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .benefit-item {
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item h4 {
+            color: #111827;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-item p {
+            color: #6B7280;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
         @media (max-width: 768px) {
             .hero-content {
                 grid-template-columns: 1fr;
@@ -484,6 +751,19 @@
 
             .showcase-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        /* Responsivo extra para pricing */
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            .pricing-card.featured {
+                transform: scale(1);
             }
         }
     </style>
@@ -565,6 +845,117 @@
             </div>
         </div>
     </section>
+
+    <!-- === SECCIÓN DE PLANES (PRICING) AGREGADA === -->
+    <section id="pricing" class="pricing">
+        <div class="pricing-content">
+            <h2 class="section-title">Elige Tu Plan</h2>
+            <p class="section-subtitle">Accede a funciones premium y lleva tu control financiero al siguiente nivel</p>
+            
+            <div class="pricing-toggle">
+                <span class="toggle-label" id="monthly-label">Mensual</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="pricing-toggle" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label active" id="annual-label">Anual <span class="save-badge">Ahorra 20%</span></span>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-badge">GRATIS</div>
+                    <h3>Plan Básico</h3>
+                    <div class="price-container">
+                        <span class="currency">S/</span>
+                        <span class="price">0</span>
+                        <span class="period">/mes</span>
+                    </div>
+                    <ul class="features-list">
+                        <li>✓ Escaneo OCR ilimitado</li>
+                        <li>✓ Registro manual de gastos</li>
+                        <li>✓ Categorización automática</li>
+                        <li>✓ Control de presupuesto básico</li>
+                        <li>✓ Reportes mensuales simples</li>
+                        <li>✗ Análisis avanzados</li>
+                        <li>✗ Integración contable</li>
+                        <li>✗ Soporte prioritario</li>
+                    </ul>
+                    <a href="#" class="plan-button basic">Comenzar Gratis</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="plan-badge premium">MÁS POPULAR</div>
+                    <h3>Plan Premium</h3>
+                    <div class="price-container">
+                        <span class="currency">S/</span>
+                        <span class="price" id="premium-price">15.90</span>
+                        <span class="period">/mes</span>
+                    </div>
+                    <div class="annual-info show" id="annual-info">
+                        <span class="original-price">S/238.80 al año</span>
+                        <span class="discount-text">Pagas solo S/190.80 (20% off)</span>
+                    </div>
+                    <ul class="features-list">
+                        <li>✓ Todo lo del Plan Básico</li>
+                        <li>✓ <strong>Análisis financieros avanzados</strong></li>
+                        <li>✓ <strong>Predicción de gastos con IA</strong></li>
+                        <li>✓ <strong>Integración con sistemas contables</strong></li>
+                        <li>✓ <strong>Exportación a Excel/PDF</strong></li>
+                        <li>✓ <strong>Alertas personalizadas</strong></li>
+                        <li>✓ <strong>Múltiples presupuestos</strong></li>
+                        <li>✓ <strong>Soporte prioritario 24/7</strong></li>
+                    </ul>
+                    <a href="#" class="plan-button premium">Obtener Premium</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="plan-badge">EMPRESAS</div>
+                    <h3>Plan Empresarial</h3>
+                    <div class="price-container">
+                        <span class="price-custom">Personalizado</span>
+                    </div>
+                    <ul class="features-list">
+                        <li>✓ Todo lo del Plan Premium</li>
+                        <li>✓ <strong>Usuarios ilimitados</strong></li>
+                        <li>✓ <strong>Integración ERP/CRM</strong></li>
+                        <li>✓ <strong>API dedicada</strong></li>
+                        <li>✓ <strong>Reportes personalizados</strong></li>
+                        <li>✓ <strong>Gestor de cuenta dedicado</strong></li>
+                        <li>✓ <strong>Capacitación del equipo</strong></li>
+                        <li>✓ <strong>SLA garantizado</strong></li>
+                    </ul>
+                    <a href="#" class="plan-button enterprise">Contactar Ventas</a>
+                </div>
+            </div>
+
+            <div class="premium-benefits">
+                <h3>¿Por qué elegir Premium?</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🤖</span>
+                        <h4>Inteligencia Artificial</h4>
+                        <p>Predicciones inteligentes de tus patrones de gasto</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🔗</span>
+                        <h4>Integración Total</h4>
+                        <p>Conecta con QuickBooks, Xero, SAP y más</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">📈</span>
+                        <h4>Análisis Profundo</h4>
+                        <p>Reportes avanzados con gráficos interactivos</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🎯</span>
+                        <h4>Soporte VIP</h4>
+                        <p>Respuesta en menos de 2 horas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- === FIN SECCIÓN DE PLANES === -->
 
     <section class="stats">
         <div class="stats-grid">
@@ -692,6 +1083,29 @@
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease';
             observer.observe(el);
+        });
+    </script>
+
+    <!-- Script de toggle de precios -->
+    <script>
+        const toggle = document.getElementById('pricing-toggle');
+        const premiumPrice = document.getElementById('premium-price');
+        const annualInfo = document.getElementById('annual-info');
+        const monthlyLabel = document.getElementById('monthly-label');
+        const annualLabel = document.getElementById('annual-label');
+
+        toggle.addEventListener('change', function() {
+            if (this.checked) {
+                premiumPrice.textContent = '15.90';
+                annualInfo.classList.add('show');
+                monthlyLabel.classList.remove('active');
+                annualLabel.classList.add('active');
+            } else {
+                premiumPrice.textContent = '19.90';
+                annualInfo.classList.remove('show');
+                monthlyLabel.classList.add('active');
+                annualLabel.classList.remove('active');
+            }
         });
     </script>
 </body>
